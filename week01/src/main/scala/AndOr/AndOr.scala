@@ -1,3 +1,5 @@
+package AndOr
+
 object AndOr {
   def and(x: Boolean, y: => Boolean): Boolean = {
     if(!x) false else y
