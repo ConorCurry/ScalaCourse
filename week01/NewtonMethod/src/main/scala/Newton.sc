@@ -1,8 +1,11 @@
+import scala.annotation.tailrec
+
 object Newton {
   def abs(x: Double) = if(x < 0) -x else x
 
   def sqrt(x: Double) = {
 
+    @tailrec
     def sqrtIter(guess: Double): Double =
       if (isGoodEnough(guess)) guess
       else sqrtIter(improve(guess))
